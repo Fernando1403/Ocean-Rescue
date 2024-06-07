@@ -38,7 +38,7 @@ a:hover{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient( rgba(0,0,0, 0), rgba(0,0,0,0.6)), 
-    url(../images/Cards-Foto/img-fundo-mar.jpg);
+    url(../images/Fotos/img-fundo-mar.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -57,7 +57,7 @@ a:hover{
 }
 
 .header-page img{
-    width: 13%;
+    width: 6%;
 }
 
 .header-page ul{
@@ -171,7 +171,7 @@ a:hover{
 }
 
 .sobre-text h3{
-    font-size: clamp(18px,2vw,35px);
+    font-size: clamp(18px,1.5vw,35px);
     /* text-wrap: balance; */
     line-height: 1.3;
 }
@@ -195,19 +195,18 @@ a:hover{
 
 /************ FIM SOBRE ****************/
 
-/* NOSSO TIME */
+/* CARDS */
 
-.dynamics {
+.card {
     width: 80%;
-    min-height: 100vh;
     margin: 40px auto;
 }
 
-.dynamics h2 {
+.card h2 {
     margin: 30px 0 50px;
 }
 
-.dynamics-list {
+.card-list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -216,7 +215,7 @@ a:hover{
     justify-content: center;
 }
 
-.dynamics-item {
+.card-item {
     width: 28%;
     display: flex;
     flex-direction: column;
@@ -228,31 +227,33 @@ a:hover{
     border-radius: 7px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background: #fff;
+    margin-bottom: 60px;
 }
 
-.dynamics-item img {
-    width: 100%; 
+.card-item img {
+    width: 100%;
+    /* max-height: 250px; */
     height: auto;
     border-radius: 7px;
 }
 
-.dynamics-item h3 {
+.card-item h3 {
     margin-top: 30px;
 }
 
-.dynamics-p {
+.card-p {
     color: grey;
     flex-grow: 1;
     display: flex;
     align-items: center;
 }
 
-.dynamics-p p {
+.card-p p {
     margin: 0;
     padding: 10px; 
 }
 
-/* FIM NOSSO TIME */
+/* FIM CARDS */
 
 /**************** Footer ************/
 
@@ -345,7 +346,7 @@ a:hover{
 /********** Pensando no responsivo *********/
 
 @media (width <= 950px) {
-    .dynamics-item {
+    .card-item {
         width: 42%;
     }
     .sobre-photo {
@@ -374,10 +375,39 @@ a:hover{
 }
 
 @media (width <= 650px) {
-    .dynamics-item {
+    .card-item {
         width: 88%;
     }
     .contact {
         width: 95%;
+    }
+}
+
+@media (width <= 350px) {
+    .card-item {
+        width: 20%;
+    }
+    .sobre-photo {
+        width: 25%;
+    }
+    .sobre-text {
+        width: 50%;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    .sobre-text h4 {
+        display: none;
+    }
+    .contact {
+        width: 60%;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-contact, .footer-social {
+        text-align: center;
     }
 }
